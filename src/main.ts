@@ -8,7 +8,7 @@ const logger = new Logger('Main');
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
-    logger: ['log', 'debug'],
+    // logger: ['log', 'debug'],
     // logger: false,
   });
 
