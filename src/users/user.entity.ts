@@ -8,6 +8,8 @@ import {
   Entity,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+// Exclude is a decorator
+import { Exclude } from 'class-transformer';
 
 // By naming convention, this entity class must be called User and not UserEntity
 @Entity()
@@ -21,6 +23,7 @@ export class User {
   email: string;
 
   @Column()
+  @Exclude()
   password: string;
 
   // Whenever we insert a new user into the database, this function should be executed
